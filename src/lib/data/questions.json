@@ -1,0 +1,129 @@
+{
+	"axes": [
+		{
+			"id": "sugar",
+			"poleA": "S",
+			"poleB": "B",
+			"section": "당",
+			"labelA": "Sugar Rush",
+			"labelB": "Balanced Sweet"
+		},
+		{
+			"id": "sodium",
+			"poleA": "L",
+			"poleB": "C",
+			"section": "나트륨",
+			"labelA": "Loves Salt",
+			"labelB": "Clean Taste"
+		},
+		{
+			"id": "carb",
+			"poleA": "C",
+			"poleB": "K",
+			"section": "탄수화물",
+			"labelA": "Carb Craver",
+			"labelB": "Keto Mind"
+		}
+	],
+	"questions": [
+		{
+			"axis": "sodium",
+			"section": "나트륨",
+			"text": "라면이나 찌개를 먹을 때 국물을 많이 먹는 편이다.",
+			"options": [
+				{ "label": "매우 그렇다", "scoreA": 3 },
+				{ "label": "그렇다", "scoreA": 2 },
+				{ "label": "그렇지 않다", "scoreA": 1 },
+				{ "label": "전혀 그렇지 않다", "scoreA": 0 }
+			]
+		},
+		{
+			"axis": "sodium",
+			"section": "나트륨",
+			"text": "(간이 안 된) 삼계탕을 먹을 때 소금을 추가하는 편이다.",
+			"options": [
+				{ "label": "많이 넣는다", "scoreA": 3 },
+				{ "label": "적당히 넣는다", "scoreA": 2 },
+				{ "label": "조금만 넣는다", "scoreA": 1 },
+				{ "label": "거의 넣지 않는다", "scoreA": 0 }
+			]
+		},
+		{
+			"axis": "sodium",
+			"section": "나트륨",
+			"text": "단 디저트(마이쮸 등)보다 짠 과자(프링글스 등)을 더 즐겨 먹는 편이다.",
+			"options": [
+				{ "label": "매우 그렇다", "scoreA": 3 },
+				{ "label": "그렇다", "scoreA": 2 },
+				{ "label": "그렇지 않다", "scoreA": 1 },
+				{ "label": "전혀 그렇지 않다", "scoreA": 0 }
+			]
+		},
+		{
+			"axis": "carb",
+			"section": "탄수화물",
+			"text": "스트레스를 받으면 빵, 떡, 면, 밥 같은 탄수화물이 당긴다.",
+			"options": [
+				{ "label": "매우 그렇다", "scoreA": 3 },
+				{ "label": "그렇다", "scoreA": 2 },
+				{ "label": "그렇지 않다", "scoreA": 1 },
+				{ "label": "전혀 그렇지 않다", "scoreA": 0 }
+			]
+		},
+		{
+			"axis": "carb",
+			"section": "탄수화물",
+			"text": "식사를 할 때 밥이나 면 같은 탄수화물이 없으면 식사를 한 것 같지 않다.",
+			"options": [
+				{ "label": "매우 그렇다", "scoreA": 3 },
+				{ "label": "그렇다", "scoreA": 2 },
+				{ "label": "그렇지 않다", "scoreA": 1 },
+				{ "label": "전혀 그렇지 않다", "scoreA": 0 }
+			]
+		},
+		{
+			"axis": "carb",
+			"section": "탄수화물",
+			"text": "디저트를 고를 때 과일보다 빵이나 떡 같은 탄수화물을 더 선호한다.",
+			"options": [
+				{ "label": "매우 그렇다", "scoreA": 3 },
+				{ "label": "그렇다", "scoreA": 2 },
+				{ "label": "그렇지 않다", "scoreA": 1 },
+				{ "label": "전혀 그렇지 않다", "scoreA": 0 }
+			]
+		},
+		{
+			"axis": "sugar",
+			"section": "당",
+			"text": "공차에서 음료를 주문할 때 당도를 어떻게 설정하나요?",
+			"options": [
+				{ "label": "100%", "scoreA": 3 },
+				{ "label": "70%", "scoreA": 2 },
+				{ "label": "50%", "scoreA": 1 },
+				{ "label": "30% 이하 (안 먹는다)", "scoreA": 0 }
+			]
+		},
+		{
+			"axis": "sugar",
+			"section": "당",
+			"text": "단 간식(초콜릿, 사탕, 디저트 등)을 얼마나 자주 먹나요?",
+			"options": [
+				{ "label": "하루에 2번 이상", "scoreA": 3 },
+				{ "label": "거의 매일 (주 5회 이상)", "scoreA": 2 },
+				{ "label": "일주일에 2~3회", "scoreA": 1 },
+				{ "label": "일주일에 1회 이하", "scoreA": 0 }
+			]
+		},
+		{
+			"axis": "sugar",
+			"section": "당",
+			"text": "카페에서 음료를 주문할 때 나는…",
+			"options": [
+				{ "label": "매우 단 음료 + 휘핑/시럽 추가 (프라푸치노 등)", "scoreA": 3 },
+				{ "label": "밀크티 (기본 당도)", "scoreA": 2 },
+				{ "label": "아메리카노 (무가당)", "scoreA": 1 },
+				{ "label": "당이 없는 차 (녹차, 홍차 등)", "scoreA": 0 }
+			]
+		}
+	]
+}
