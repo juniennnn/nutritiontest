@@ -43,22 +43,10 @@
 	<title>나의 영양소 입맛 테스트</title>
 </svelte:head>
 
-<!-- 배경 글로우 -->
-<div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-	<div
-		class="absolute left-1/2 top-[-10%] h-120 w-120 -translate-x-1/2 rounded-full opacity-30 blur-[120px]"
-		style="background-image: radial-gradient(circle, #f59e0b, transparent 70%);"
-	></div>
-	<div
-		class="absolute right-[-5%] top-[40%] h-100 w-100 rounded-full opacity-20 blur-[120px]"
-		style="background-image: radial-gradient(circle, #ec4899, transparent 70%);"
-	></div>
-</div>
-
 <!-- 진행도 바 (상단 고정) -->
-<div class="fixed inset-x-0 top-0 z-20 h-1 bg-white/5">
+<div class="fixed inset-x-0 top-0 z-20 h-1 bg-zinc-200">
 	<div
-		class="h-full bg-white transition-all duration-300 ease-out"
+		class="h-full bg-zinc-900 transition-all duration-300 ease-out"
 		style="width: {progress}%;"
 	></div>
 </div>
@@ -66,10 +54,10 @@
 <main class="mx-auto w-full max-w-2xl px-5 pb-40 pt-20 sm:pt-28">
 	<!-- 히어로 -->
 	<header class="mb-12 text-center">
-		<h1 class="text-3xl font-black leading-tight text-white sm:text-5xl">
+		<h1 class="text-3xl font-black leading-tight text-zinc-900 sm:text-5xl">
 			나의 영양소 입맛은<br />어떤 유형일까?
 		</h1>
-		<p class="mx-auto mt-4 max-w-md text-[15px] leading-relaxed text-white/55">
+		<p class="mx-auto mt-4 max-w-md text-[15px] leading-relaxed text-zinc-500">
 			단·짠·탄 9개의 질문에 답하고 나만의 식습관 유형을 알아보세요.
 		</p>
 	</header>
@@ -89,17 +77,17 @@
 </main>
 
 <!-- 하단 고정 제출 바 -->
-<div class="fixed inset-x-0 bottom-0 z-20 border-t border-white/10 bg-black/60 backdrop-blur-md">
+<div class="fixed inset-x-0 bottom-0 z-20 border-t border-zinc-200 bg-white/80 backdrop-blur-md">
 	<div class="mx-auto flex max-w-2xl items-center justify-between gap-4 px-5 py-4">
-		<span class="text-sm text-white/50">{answeredCount} / {questions.length} 응답</span>
+		<span class="text-sm text-zinc-500">{answeredCount} / {questions.length} 응답</span>
 		<button
 			type="button"
 			onclick={submit}
 			disabled={!allAnswered}
 			class="rounded-full px-7 py-3 text-sm font-semibold transition-all
 				{allAnswered
-				? 'bg-white text-black hover:bg-white/90'
-				: 'cursor-not-allowed bg-white/10 text-white/40'}"
+				? 'bg-zinc-900 text-white hover:bg-zinc-800'
+				: 'cursor-not-allowed bg-zinc-100 text-zinc-400'}"
 		>
 			결과 보기
 		</button>

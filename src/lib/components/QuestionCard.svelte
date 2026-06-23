@@ -17,15 +17,15 @@
 </script>
 
 <div
-	class="rounded-2xl border border-white/10 bg-white/3 p-6 backdrop-blur-sm transition-colors hover:border-white/20 sm:p-7"
+	class="rounded-2xl border border-zinc-200 bg-white p-6 transition-colors hover:border-zinc-300 sm:p-7"
 >
 	<div class="mb-5 flex items-start gap-3">
 		<span
-			class="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white/10 text-sm font-semibold text-white/70"
+			class="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-zinc-100 text-sm font-semibold text-zinc-500"
 		>
 			{number}
 		</span>
-		<p class="text-base font-medium leading-relaxed text-white sm:text-lg">{text}</p>
+		<p class="text-base font-medium leading-relaxed text-zinc-900 sm:text-lg">{text}</p>
 	</div>
 
 	<div class="flex flex-col gap-2.5">
@@ -35,15 +35,15 @@
 				onclick={() => onSelect(i)}
 				class="group flex items-center gap-3 rounded-xl border px-4 py-3 text-left transition-all
 					{selected === i
-					? 'border-white/60 bg-white/10 text-white'
-					: 'border-white/10 bg-transparent text-white/70 hover:border-white/25 hover:bg-white/4'}"
+					? 'border-zinc-900 bg-zinc-900/5 text-zinc-900'
+					: 'border-zinc-200 bg-transparent text-zinc-600 hover:border-zinc-300 hover:bg-zinc-50'}"
 			>
 				<span
 					class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border transition-colors
-						{selected === i ? 'border-white bg-white' : 'border-white/30'}"
+						{selected === i ? 'border-zinc-900 bg-zinc-900' : 'border-zinc-300'}"
 				>
 					{#if selected === i}
-						<span class="h-2 w-2 rounded-full bg-black"></span>
+						<span class="h-2 w-2 rounded-full bg-white"></span>
 					{/if}
 				</span>
 				<span class="text-sm sm:text-[15px]">{option.label}</span>

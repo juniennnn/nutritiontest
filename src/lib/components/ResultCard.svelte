@@ -21,45 +21,28 @@
 </script>
 
 <div class="flex w-full flex-col items-center">
-	<!-- 상단 중앙: 이미지 공간 -->
-	<div
-		class="relative aspect-square w-full max-w-75 overflow-hidden rounded-3xl border border-white/10 shadow-2xl"
-		style="background-color: {result.color.accent};"
-	>
-		<!-- 은은한 상단 글로스 (이미지 뒤에 깔아 인물을 덮지 않음) -->
-		<div
-			class="pointer-events-none absolute inset-0"
-			style="background-image: radial-gradient(120% 80% at 50% 0%, rgba(255,255,255,0.28), transparent 60%);"
-		></div>
-		{#if imageSrc}
-			<!-- 투명 배경 일러스트: 그라데이션 위에 패딩 + 드롭섀도로 띄움 -->
-			<img
-				src={imageSrc}
-				alt={result.title}
-				class="absolute inset-0 h-full w-full object-contain p-5 drop-shadow-[0_10px_22px_rgba(0,0,0,0.3)]"
-			/>
-		{:else}
-			<div class="absolute inset-0 flex flex-col items-center justify-center gap-3">
-				<span class="text-7xl drop-shadow-lg">{result.emoji}</span>
-				<span class="text-2xl font-black tracking-[0.25em] text-white/90">{result.code}</span>
-			</div>
-		{/if}
-	</div>
+	<!-- 상단 중앙: 박스 없이 흰 배경과 일체된 일러스트 (투명 PNG) -->
+	{#if imageSrc}
+		<img
+			src={imageSrc}
+			alt={result.title}
+			class="aspect-square w-full max-w-80 object-contain"
+		/>
+	{:else}
+		<div class="flex aspect-square w-full max-w-80 flex-col items-center justify-center gap-3">
+			<span class="text-7xl">{result.emoji}</span>
+			<span class="text-2xl font-black tracking-[0.25em] text-zinc-300">{result.code}</span>
+		</div>
+	{/if}
 
 	<!-- 하단: 설명문 -->
-	<div class="mt-8 flex flex-col items-center text-center">
-		<span
-			class="mb-3 rounded-full border px-4 py-1 text-sm font-semibold tracking-widest"
-			style="border-color: {result.color.accent}55; color: {result.color
-				.accent}; background-color: {result.color.accent}1a;"
-		>
-			{result.code}
-		</span>
+	<div class="mt-6 flex flex-col items-center text-center">
+		<span class="mb-3 text-sm font-semibold tracking-[0.25em] text-zinc-400">{result.code}</span>
 		<h1 class="text-3xl font-black leading-tight sm:text-4xl" style="color: {result.color.accent};">
 			{result.title}
 		</h1>
-		<p class="mt-2 text-lg font-medium text-white/80">{result.subtitle}</p>
-		<p class="mt-6 max-w-xl text-[15px] leading-relaxed text-white/65 sm:text-base">
+		<p class="mt-2 text-lg font-medium text-zinc-500">{result.subtitle}</p>
+		<p class="mt-6 max-w-xl text-[15px] leading-relaxed text-zinc-600 sm:text-base">
 			{result.description}
 		</p>
 	</div>
